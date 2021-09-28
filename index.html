@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Javascript browser</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="intro">Registration</div>
+        <h1 class="title">Do you have a course to register?</h1>
+
+        <form>
+            <label for="fname">Full name:</label><br>
+            <p id="fname-error" class="error"></p>
+            <input id="fname" name="fname" class="form-input" type="text" required><br>
+
+            <label for="femail">Email</label><br>
+            <p id="femail-error" class="error"></p>
+            <input id="femail" name="femail" class="form-input" type="email" required><br>
+
+            <label for="fcourse">Course:</label><br>
+            <p id="fcourse-error" class="error"></p>
+            <input id="fcourse" name="fcourse" class="form-input" type="text" required><br>
+
+            <label for="fmessage">Message:</label><br>
+            <p id="fmessage-error" class="error"></p>
+            <textarea class="fmessage" name="fmessage" type="text" required></textarea><br><br>
+
+            <label for="fmath">What is one plus three?:</label><br>
+            <p id="fmath-error" class="error"></p>
+            <input id="fmath" name="fmath" class="form-input" type="number" required><br><br>
+
+            <input class="button" value="Submit" onclick="validateForm(this.form)" />
+        </form>
+    </div>
+
+    <div id="success-overlay" class="hidden">
+        <h1>
+            Congratulations it was a success
+        </h1>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
